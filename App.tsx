@@ -1,11 +1,13 @@
 import AppNavigator from "./src/navigation/Appnavigator";
-import { Provider } from "react-redux";
-import store from "./src/redux/store";
+import Authnavigator from "./src/navigation/Authnavigator";
+import { Provider, useSelector } from "react-redux";
+import store, { RootState } from "./src/redux/store";
+import MainNavigator from "./src/navigation/MainNavigator";
 
 export default function App() {
   return (
     <Provider store={store}>
-     <AppNavigator/>
+       <MainNavigator/>
     </Provider>
   );
 }
